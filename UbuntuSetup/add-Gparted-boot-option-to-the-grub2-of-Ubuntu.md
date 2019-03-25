@@ -20,8 +20,14 @@
 7. The final result should look like this: 
 
 ```
-    menuentry "Gparted live" {
-      set isofile="gparted-live-0.33.0-2-amd64.iso"
+#!/bin/sh
+exec tail -n +3 $0
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+
+menuentry "Gparted live" {
+      set isofile="/home/isos/gparted-live-0.33.0-2-amd64.iso"
       loopback loop $isofile
       linux (loop)/live/vmlinuz boot=live config union=overlay username=user components noswap noeject vga=788 ip= net.ifnames=0 toram=filesystem.squashfs findiso=$isofile
       initrd (loop)/live/initrd.img
