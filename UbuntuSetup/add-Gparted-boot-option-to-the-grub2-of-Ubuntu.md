@@ -34,7 +34,7 @@ menuentry "Gparted live" {
     }
 ```
 8. **Important:** execute the command to apply the changes you just made: `sudo update-grub2`
-
+9. Restart the computer and see that menu entry exists in your Grub Menu.
 
 ------------------
 
