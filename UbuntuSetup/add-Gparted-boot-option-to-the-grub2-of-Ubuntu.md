@@ -14,14 +14,14 @@
     }
 ```
 5. Paste it at the **end of file** of previously opened **/etc/grub.d/40_custom like**
-6. Edit `set isofile="/home/isos/gparted-live-0.28.1-1-i686.iso"` into version you use  
+6. Edit the line: `set isofile="/home/isos/gparted-live-0.28.1-1-i686.iso"` into version you downloaded  
   In my case it is: **gparted-live-0.33.0-2-amd64.iso**
   
 7. The final result should look like this: 
 
 ```
     menuentry "Gparted live" {
-      set isofile="/home/isos/gparted-live-0.28.1-1-i686.iso"
+      set isofile="gparted-live-0.33.0-2-amd64.iso"
       loopback loop $isofile
       linux (loop)/live/vmlinuz boot=live config union=overlay username=user components noswap noeject vga=788 ip= net.ifnames=0 toram=filesystem.squashfs findiso=$isofile
       initrd (loop)/live/initrd.img
