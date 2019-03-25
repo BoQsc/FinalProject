@@ -2,7 +2,7 @@
 1. Boot up into Windows 10
 2. Disable **fast startup**
 3. Shut-down Windows 10
-4. Boot up Ubuntu and see that you can: create, write, edit, delete, modify files and folders
+4. **Boot up Ubuntu and see that you can:** create, write, edit, delete, modify files and folders
 5. ???
 6. Profit
 
