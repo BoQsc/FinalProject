@@ -4,7 +4,7 @@
 2. Copy **gparted-live-0.33.0-2-amd64.iso** into folder **/home/isos/**
 3. Edit existing file: **/etc/grub.d/40_custom like**
    * I used gedit: sudo `sudo gedit /etc/grub.d/40_custom like`
-4. Copy the **menuentry "Gparted live"** 
+4. Copy this **menuentry "Gparted live":** 
 ```
     menuentry "Gparted live" {
       set isofile="/home/isos/gparted-live-0.28.1-1-i686.iso"
