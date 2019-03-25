@@ -1,3 +1,37 @@
+### Quick steps to solve
+1. Download gparted iso https://gparted.org/download.php
+   * The one I used: gparted-live-0.33.0-2-amd64.iso
+2. Copy **gparted-live-0.33.0-2-amd64.iso** into folder **/home/isos/**
+3. Edit existing file: **/etc/grub.d/40_custom like**
+   * I used gedit: sudo `sudo gedit /etc/grub.d/40_custom like`
+4. Copy the **menuentry "Gparted live"** 
+```
+    menuentry "Gparted live" {
+      set isofile="/home/isos/gparted-live-0.28.1-1-i686.iso"
+      loopback loop $isofile
+      linux (loop)/live/vmlinuz boot=live config union=overlay username=user components noswap noeject vga=788 ip= net.ifnames=0 toram=filesystem.squashfs findiso=$isofile
+      initrd (loop)/live/initrd.img
+    }
+```
+5. Paste it at the **end of file** of previously opened **/etc/grub.d/40_custom like**
+6. Edit `set isofile="/home/isos/gparted-live-0.28.1-1-i686.iso"` into version you use  
+  In my case it is: **gparted-live-0.33.0-2-amd64.iso**
+  
+7. The final result should look like this: 
+
+```
+    menuentry "Gparted live" {
+      set isofile="/home/isos/gparted-live-0.28.1-1-i686.iso"
+      loopback loop $isofile
+      linux (loop)/live/vmlinuz boot=live config union=overlay username=user components noswap noeject vga=788 ip= net.ifnames=0 toram=filesystem.squashfs findiso=$isofile
+      initrd (loop)/live/initrd.img
+    }
+```
+8. **Important:** execute the command to apply the changes you just made: `sudo update-grub2`
+
+
+------------------
+
 
 ### Original Solution
 ```
