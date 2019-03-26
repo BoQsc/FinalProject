@@ -4,7 +4,7 @@
 `cat /var/lib/dpkg/status | grep Description: | uniq -d`  
 `dpkg-query -f '${Source:package;30}\n' -W | uniq -c -u`
 
-𝐀𝐬 𝐚 𝐩𝐫𝐨𝐨𝐟, 𝐚 𝐭𝐞𝐫𝐦𝐢𝐧𝐚𝐥 𝐜𝐨𝐦𝐦𝐚𝐧𝐝: apt-cache show binutils-common | grep Source 𝐰𝐢𝐥𝐥 𝐬𝐡𝐨𝐰 𝐭𝐡𝐚𝐭 package 𝐛𝐞𝐥𝐨𝐧𝐠𝐬 𝐭𝐨 binutils Source Package
+𝐀𝐬 𝐚 𝐩𝐫𝐨𝐨𝐟, 𝐚 𝐭𝐞𝐫𝐦𝐢𝐧𝐚𝐥 𝐜𝐨𝐦𝐦𝐚𝐧𝐝: `apt-cache show binutils-common | grep Source` 𝐰𝐢𝐥𝐥 𝐬𝐡𝐨𝐰 𝐭𝐡𝐚𝐭 package 𝐛𝐞𝐥𝐨𝐧𝐠𝐬 𝐭𝐨 binutils Source Package
 
 
 
