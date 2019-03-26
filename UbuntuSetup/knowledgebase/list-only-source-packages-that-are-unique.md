@@ -1,3 +1,5 @@
+Unsolved: It seems that `uniq` does not do its work, duplicated Source Packages are still shown for unknown reason.  
+
 
 ### List Source packages of the operating system (Using dpkg)
 `cat /var/lib/dpkg/status | grep Source: | uniq -d`  
