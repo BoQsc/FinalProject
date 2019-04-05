@@ -25,7 +25,7 @@ function restoreNeedforConfirmation {
 }
 
 
-	#Requires to be first
+	#Requires to be first in this script
 	#If executed after the extraction/installation of Firefox webextension 
         # - extensions might still require to confirm and enable extension manualy .
         # If this happens:
